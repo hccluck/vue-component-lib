@@ -5,7 +5,7 @@
   "main": "./dist/vue-component-lib.umd.min.js",
   "files": [
     "dist/*",
-    "package/*",
+    "packages/*",
     "public/*",
     "*.json",
     "*.js"

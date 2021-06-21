@@ -4,7 +4,7 @@
   "bracketSpacing": true,
   "trailingComma": "all",
   "htmlWhitespaceSensitivity": "ignore",
-  "printWidth": 180,
+  "printWidth": 120,
   "tabWidth": 2,
   "useTabs": false,
   "proseWrap": "preserve",

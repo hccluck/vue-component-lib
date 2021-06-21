@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'i-input',
   props: {
     typeInput: String,
   },
