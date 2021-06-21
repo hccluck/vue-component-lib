@@ -3,8 +3,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-import components from '../dist/vue-component-lib.umd.min';
-console.log(components);
+// import components from '../dist/vue-component-lib.umd.min';
+import components from '../packages/index';
+
 Vue.config.productionTip = false;
 
 Vue.use(components);

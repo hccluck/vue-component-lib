@@ -1,24 +1,31 @@
 # vue-component-lib
 
-## Project setup
+## 安装
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开发
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 代码格式化
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 启动组件故事
+```
+npm run storybook
+```
+
+### 生产组件故事官网
+```
+npm run build-storybook
+```

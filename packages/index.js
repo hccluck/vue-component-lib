@@ -1,9 +1,8 @@
 import packageJson from '../package.json';
 
-import Input from './input/index.vue';
 import Button from './button/index.vue';
 
-const components = [Input, Button];
+const components = [Button];
 
 // eslint-disable-next-line no-unused-vars
 const install = function (Vue, opts = {}) {
@@ -19,6 +18,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   version: packageJson.version,
   install,
-  Input,
   Button,
 };

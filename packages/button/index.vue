@@ -1,24 +1,52 @@
 <template>
-  <button>
-    <slot></slot>
-  </button>
+  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
 </template>
 
 <script>
+import './index.css';
 export default {
   name: 'i-button',
-  props: {},
+  props: {
+    label: {
+      type: String,
+      required: true,
+    },
+    primary: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
+      type: String,
+      default: 'medium',
+      validator: function (value) {
+        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+      },
+    },
+    backgroundColor: {
+      type: String,
+    },
+  },
+
+  computed: {
+    classes() {
+      return {
+        'storybook-button': true,
+        'storybook-button--primary': this.primary,
+        'storybook-button--secondary': !this.primary,
+        [`storybook-button--${this.size}`]: true,
+      };
+    },
+    style() {
+      return {
+        backgroundColor: this.backgroundColor,
+      };
+    },
+  },
+
+  methods: {
+    onClick() {
+      this.$emit('onClick');
+    },
+  },
 };
 </script>
-
-<style lang="less" scoped>
-@import url('../styles/index.less');
-button {
-  background: @primary-color;
-  color: #fff;
-  padding: 4px 10px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-</style>

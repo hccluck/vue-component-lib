@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <i-button>Hello</i-button>
-    <i-input typeInput="text"></i-input>
+    <i-button label="click me">Hello</i-button>
   </div>
 </template>
 
