@@ -916,7 +916,7 @@ module.exports = DESCRIPTORS ? function (object, key, value) {
 /***/ "9224":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"name\":\"vue-component-lib\",\"version\":\"1.0.0\",\"private\":true,\"main\":\"./dist/vue-component-lib.umd.min.js\",\"files\":[\"dist/*\",\"packages/*\",\"public/*\",\"*.json\",\"*.js\"],\"scripts\":{\"serve\":\"vue-cli-service serve --open\",\"build\":\"vue-cli-service build --target lib --name vue-component-lib ./packages/index.js\",\"storybook\":\"start-storybook -p 6006\",\"build-storybook\":\"build-storybook\",\"lint\":\"vue-cli-service lint --fix\"},\"keywords\":[\"vue\",\"components\",\"vue-component-lib\"],\"license\":\"ISC\",\"peerDependencies\":{\"core-js\":\"^3.6.5\",\"vue\":\"^2.6.11\",\"vue-router\":\"^3.2.0\",\"vuex\":\"^3.4.0\"},\"devDependencies\":{\"@babel/core\":\"^7.14.6\",\"@storybook/addon-actions\":\"^6.2.9\",\"@storybook/addon-essentials\":\"^6.2.9\",\"@storybook/addon-links\":\"^6.2.9\",\"@storybook/vue\":\"^6.2.9\",\"@vue/cli-plugin-babel\":\"~4.5.0\",\"@vue/cli-plugin-eslint\":\"~4.5.0\",\"@vue/cli-plugin-router\":\"~4.5.0\",\"@vue/cli-plugin-vuex\":\"~4.5.0\",\"@vue/cli-service\":\"~4.5.0\",\"@vue/eslint-config-prettier\":\"^6.0.0\",\"babel-eslint\":\"^10.1.0\",\"babel-loader\":\"^8.2.2\",\"eslint\":\"^6.7.2\",\"eslint-plugin-prettier\":\"^3.3.1\",\"eslint-plugin-vue\":\"^6.2.2\",\"less\":\"^3.0.4\",\"less-loader\":\"^5.0.0\",\"prettier\":\"^2.2.1\",\"vue-loader\":\"^15.9.7\",\"vue-template-compiler\":\"^2.6.11\"},\"dependencies\":{}}");
+module.exports = JSON.parse("{\"name\":\"vue-component-lib\",\"version\":\"1.0.0\",\"description\":\"A Component Library for Vue.js.\",\"private\":true,\"main\":\"./dist/vue-component-lib.umd.min.js\",\"files\":[\"dist/*\",\"packages/*\",\"public/*\",\"*.json\",\"*.js\"],\"scripts\":{\"serve\":\"vue-cli-service serve --open\",\"build\":\"vue-cli-service build --target lib --name vue-component-lib ./packages/index.js\",\"lint\":\"vue-cli-service lint --fix\"},\"keywords\":[\"vue\",\"components\",\"vue-component-lib\"],\"license\":\"ISC\",\"peerDependencies\":{\"core-js\":\"^3.6.5\",\"vue\":\"^2.6.11\",\"vue-router\":\"^3.2.0\",\"vuex\":\"^3.4.0\"},\"devDependencies\":{\"@babel/core\":\"^7.14.6\",\"@vue/cli-plugin-babel\":\"~4.5.0\",\"@vue/cli-plugin-eslint\":\"~4.5.0\",\"@vue/cli-plugin-router\":\"~4.5.0\",\"@vue/cli-plugin-vuex\":\"~4.5.0\",\"@vue/cli-service\":\"~4.5.0\",\"@vue/eslint-config-prettier\":\"^6.0.0\",\"babel-eslint\":\"^10.1.0\",\"babel-loader\":\"^8.2.2\",\"eslint\":\"^6.7.2\",\"eslint-plugin-prettier\":\"^3.3.1\",\"eslint-plugin-vue\":\"^6.2.2\",\"less\":\"^3.0.4\",\"less-loader\":\"^5.0.0\",\"prettier\":\"^2.2.1\",\"vue-loader\":\"^15.9.7\",\"vue-template-compiler\":\"^2.6.11\"},\"dependencies\":{}}");
 
 /***/ }),
 
@@ -1371,7 +1371,7 @@ var es_function_name = __webpack_require__("b0c0");
 // EXTERNAL MODULE: ./package.json
 var package_0 = __webpack_require__("9224");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"540fd648-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./packages/button/index.vue?vue&type=template&id=6a1a0bfa&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"c3f7476e-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./packages/button/index.vue?vue&type=template&id=6a1a0bfa&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{class:_vm.classes,style:(_vm.style),attrs:{"type":"button"},on:{"click":_vm.onClick}},[_vm._v(_vm._s(_vm.label))])}
 var staticRenderFns = []
 
@@ -1567,12 +1567,22 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var packages_button_0 = (component.exports);
+// CONCATENATED MODULE: ./packages/button/index.js
+
+
+/* istanbul ignore next */
+
+packages_button_0.install = function (Vue) {
+  Vue.component(packages_button_0.name, packages_button_0);
+};
+
+/* harmony default export */ var packages_button_1 = (packages_button_0);
 // CONCATENATED MODULE: ./packages/index.js
 
 
 
 
-var components = [packages_button_0]; // eslint-disable-next-line no-unused-vars
+var components = [packages_button_1]; // eslint-disable-next-line no-unused-vars
 
 var install = function install(Vue) {
   var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -1588,7 +1598,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 /* harmony default export */ var packages_0 = ({
   version: package_0.version,
   install: install,
-  Button: packages_button_0
+  Button: packages_button_1
 });
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
