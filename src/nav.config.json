@@ -1,0 +1,37 @@
+{
+  "index": [
+    {
+      "name": "指南",
+      "children": [
+        {
+          "path": "usage",
+          "name": "使用指南"
+        },
+        {
+          "path": "dev",
+          "name": "开发指南"
+        }
+      ]
+    },
+    {
+      "name": "组件",
+      "groups": [
+        {
+          "groupName": "Basic",
+          "list": [
+            {
+              "filename": "button",
+              "path": "button",
+              "title": "Button"
+            },
+            {
+              "filename": "layout",
+              "path": "layout",
+              "title": "Layout"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["chunk-2d0b68f8"],{"1e4b":function(n,e,t){"use strict";t.r(e);var c={name:"index",components:{},data:function(){return{}},methods:{}};t=t("2877"),c=Object(t.a)(c,(function(){var n=this,e=n.$createElement;return(n._self._c||e)("div",[n._v("首页")])}),[],!1,null,"1cfd6fec",null);e.default=c.exports}}]);

@@ -1,51 +1,78 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
-</template>
-
-<script>
-import './index.css';
-export default {
-  name: 'i-button',
-  props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    primary: {
-      type: Boolean,
-      default: false,
-    },
-    size: {
-      type: String,
-      default: 'medium',
-      validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+  <button
+    class="el-button"
+    @click="handleClick"
+    :disabled="buttonDisabled || loading"
+    :autofocus="autofocus"
+    :type="nativeType"
+    :class="[
+      type ? 'el-button--' + type : '',
+      buttonSize ? 'el-button--' + buttonSize : '',
+      {
+        'is-disabled': buttonDisabled,
+        'is-loading': loading,
+        'is-plain': plain,
+        'is-round': round,
+        'is-circle': circle,
       },
+    ]"
+  >
+    <i class="el-icon-loading" v-if="loading"></i>
+    <i :class="icon" v-if="icon && !loading"></i>
+    <span v-if="$slots.default"><slot></slot></span>
+  </button>
+</template>
+<script>
+import '../styles/button.css';
+export default {
+  name: 'ElButton',
+
+  inject: {
+    elForm: {
+      default: '',
     },
-    backgroundColor: {
-      type: String,
+    elFormItem: {
+      default: '',
     },
   },
 
-  computed: {
-    classes() {
-      return {
-        'storybook-button': true,
-        'storybook-button--primary': this.primary,
-        'storybook-button--secondary': !this.primary,
-        [`storybook-button--${this.size}`]: true,
-      };
+  props: {
+    type: {
+      type: String,
+      default: 'default',
     },
-    style() {
-      return {
-        backgroundColor: this.backgroundColor,
-      };
+    size: String,
+    icon: {
+      type: String,
+      default: '',
+    },
+    nativeType: {
+      type: String,
+      default: 'button',
+    },
+    loading: Boolean,
+    disabled: Boolean,
+    plain: Boolean,
+    autofocus: Boolean,
+    round: Boolean,
+    circle: Boolean,
+  },
+
+  computed: {
+    _elFormItemSize() {
+      return (this.elFormItem || {}).elFormItemSize;
+    },
+    buttonSize() {
+      return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
+    },
+    buttonDisabled() {
+      return this.disabled || (this.elForm || {}).disabled;
     },
   },
 
   methods: {
-    onClick() {
-      this.$emit('onClick');
+    handleClick(evt) {
+      this.$emit('click', evt);
     },
   },
 };
