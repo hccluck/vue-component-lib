@@ -32,7 +32,7 @@ function genInlineComponentText(template, script) {
   const finalOptions = {
     source: `<div>${template}</div>`,
     filename: 'inline-component', // TODO：这里有待调整
-    compiler
+    compiler,
   };
   const compiled = compileTemplate(finalOptions);
   // tips
@@ -46,7 +46,7 @@ function genInlineComponentText(template, script) {
     console.error(
       `\n  Error compiling template:\n${pad(compiled.source)}\n` +
         compiled.errors.map(e => `  - ${e}`).join('\n') +
-        '\n'
+        '\n',
     );
   }
   let demoComponentContent = `
@@ -75,5 +75,5 @@ module.exports = {
   stripScript,
   stripStyle,
   stripTemplate,
-  genInlineComponentText
+  genInlineComponentText,
 };

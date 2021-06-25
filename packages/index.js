@@ -22,4 +22,7 @@ export default {
   version: packageJson.version,
   install,
   Button,
+  ButtonGroup,
+  Row,
+  Col,
 };
